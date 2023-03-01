@@ -16,7 +16,10 @@ export const DocumentCard = ({ title, vat, contentText }) => {
     <Card>
       <Header>
         <HeaderIcon>
-          <img src="./assets/img/fluent_document-bullet-list-icon.svg" alt="" />
+          <img
+            src="./assets/img/fluent_document-bullet-list-icon.svg"
+            alt="icon"
+          />
         </HeaderIcon>
         <HeaderTitle>{title}</HeaderTitle>
       </Header>

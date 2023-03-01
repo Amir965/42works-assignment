@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState, useRef } from "react";
 import { HeaderComponent } from "../../components/HeaderComponent/HeaderComponent";
 import { FooterComponent } from "../../components/FooterComponent/FooterComponent";
@@ -71,12 +72,12 @@ import {
   JoinImageWrapper,
   CustomerSaySlider,
   CustomerSaysCard,
-  StarContainer
+  StarContainer,
 } from "./styles";
 
-const NewSlider = (props)=>{
-  return <Slider {...props}></Slider>
-} 
+// const NewSlider = (props)=>{
+//   return <Slider {...props}></Slider>
+// }
 export const Home = () => {
   const [activeTab, setActiveTab] = useState(0);
   const adviceSliderRef = useRef();
@@ -162,10 +163,9 @@ export const Home = () => {
         <HeroContainer className="container">
           <HeroLeftSection>
             <HeroImageContainer>
-              <img src="./assets/img/home-hero-img.png" alt="" />
+              <img src="./assets/img/home-hero-img.png" alt="hero" />
             </HeroImageContainer>
           </HeroLeftSection>
-          {/* ----------- HeroLeftSection end ---------------- */}
           <HeroRightSection>
             <HeroTitle>
               Law For Me helps you{" "}
@@ -179,7 +179,6 @@ export const Home = () => {
             </p>
 
             <SearchBox className="search-box-component" />
-            {/* SearchBox component end  */}
 
             <WokringWithSection>
               <p>Working with</p>
@@ -196,10 +195,8 @@ export const Home = () => {
               </ul>
             </WokringWithSection>
           </HeroRightSection>
-          {/* ----------- HeroRightSection end ---------------- */}
         </HeroContainer>
       </HeroSection>
-      {/* hero section end */}
       <LeagalSeaction>
         <LeagleContiner className="container">
           <SectionTitie>Legal Documents</SectionTitie>
@@ -216,7 +213,6 @@ export const Home = () => {
               ></i>
               <span className="btn-text">Employment Law & HR</span>
             </TabButton>
-            {/* TabButton  end 1*/}
             <TabButton active={activeTab === 1} onClick={() => setActiveTab(1)}>
               <i
                 className="icon"
@@ -224,7 +220,6 @@ export const Home = () => {
               ></i>
               <span className="btn-text">Business Law</span>
             </TabButton>
-            {/* TabButton  end 2*/}
             <TabButton active={activeTab === 2} onClick={() => setActiveTab(2)}>
               <i
                 className="icon"
@@ -232,7 +227,6 @@ export const Home = () => {
               ></i>
               <span className="btn-text">Wills & Trusts</span>
             </TabButton>
-            {/* TabButton  end 3*/}
             <TabButton active={activeTab === 3} onClick={() => setActiveTab(3)}>
               <i
                 className="icon"
@@ -240,7 +234,6 @@ export const Home = () => {
               ></i>
               <span className="btn-text">Bespoke Agreements</span>
             </TabButton>
-            {/* TabButton  end 4*/}
             <TabPanel active={activeTab === 0}>
               <TabPanelConatiner>
                 <TabPanelLeft>
@@ -289,7 +282,6 @@ export const Home = () => {
                 </TabPanelRight>
               </TabPanelConatiner>
             </TabPanel>
-            {/* TabPanel end 1 */}
             <TabPanel active={activeTab === 1}>
               <TabPanelConatiner>
                 <TabPanelLeft>
@@ -301,7 +293,7 @@ export const Home = () => {
                   <img
                     className="animation-img"
                     src="./assets/img/how-it-wroks.png"
-                    alt=""
+                    alt="works"
                   />
                 </TabPanelLeft>
                 <TabPanelRight>
@@ -338,7 +330,6 @@ export const Home = () => {
                 </TabPanelRight>
               </TabPanelConatiner>
             </TabPanel>
-            {/* TabPanel end 2 */}
             <TabPanel active={activeTab === 2}>
               <TabPanelConatiner>
                 <TabPanelLeft>
@@ -350,7 +341,7 @@ export const Home = () => {
                   <img
                     className="animation-img"
                     src="./assets/img/how-it-wroks.png"
-                    alt=""
+                    alt="logo"
                   />
                 </TabPanelLeft>
                 <TabPanelRight>
@@ -387,7 +378,6 @@ export const Home = () => {
                 </TabPanelRight>
               </TabPanelConatiner>
             </TabPanel>
-            {/* TabPanel end 3 */}
             <TabPanel active={activeTab === 3}>
               <TabPanelConatiner>
                 <TabPanelLeft>
@@ -399,7 +389,7 @@ export const Home = () => {
                   <img
                     className="animation-img"
                     src="./assets/img/how-it-wroks.png"
-                    alt=""
+                    alt="logo"
                   />
                 </TabPanelLeft>
                 <TabPanelRight>
@@ -436,11 +426,9 @@ export const Home = () => {
                 </TabPanelRight>
               </TabPanelConatiner>
             </TabPanel>
-            {/* TabPanel end 4 */}
           </TabContainer>
         </LeagleContiner>
       </LeagalSeaction>
-      {/* LeagalSeaction end */}
 
       <SubscriptionSection>
         <SubscriptionContainer className="container">
@@ -466,7 +454,6 @@ export const Home = () => {
               </SubscriptionPlanCard>
               <SubscriptionBtn>Get Started</SubscriptionBtn>
             </SubscriptionCol>
-            {/* Access Plan col end */}
             <SubscriptionCol>
               <SubscriptionPlanCard color="pink">
                 <p className="plan-title">Growth Plan</p>
@@ -475,7 +462,6 @@ export const Home = () => {
               </SubscriptionPlanCard>
               <SubscriptionBtn color="pink">Get Started</SubscriptionBtn>
             </SubscriptionCol>
-            {/* Growth Plan  col end */}
 
             <SubscriptionCol>
               <SubscriptionPlanCard>
@@ -489,7 +475,6 @@ export const Home = () => {
               </SubscriptionPlanCard>
               <SubscriptionBtn>Get Started</SubscriptionBtn>
             </SubscriptionCol>
-            {/* Professional Plan  col end */}
 
             <SubscriptionCol>
               <SubscriptionPlanCard color="pink">
@@ -499,7 +484,6 @@ export const Home = () => {
               </SubscriptionPlanCard>
               <SubscriptionBtn color="pink">Get Started</SubscriptionBtn>
             </SubscriptionCol>
-            {/* Enterprise Plan  col end */}
 
             <SubscriptionOverLay>
               <OverlayRow>
@@ -510,37 +494,35 @@ export const Home = () => {
                   </p>
                 </OverlayCol1>
                 <OverlayCol>
-                  <img src="./assets/img/check.svg" alt="" />
+                  <img src="./assets/img/check.svg" alt="check" />
                 </OverlayCol>
                 <OverlayCol>
-                  <img src="./assets/img/check.svg" alt="" />
+                  <img src="./assets/img/check.svg" alt="check" />
                 </OverlayCol>
                 <OverlayCol>
-                  <img src="./assets/img/check.svg" alt="" />
+                  <img src="./assets/img/check.svg" alt="check" />
                 </OverlayCol>
                 <OverlayCol>
-                  <img src="./assets/img/check.svg" alt="" />
+                  <img src="./assets/img/check.svg" alt="check" />
                 </OverlayCol>
               </OverlayRow>
-              {/* OverlayRow end 1 */}
               <OverlayRow>
                 <OverlayCol1>
                   <p>Added to the LFM international partners programme</p>
                 </OverlayCol1>
                 <OverlayCol>
-                  <img src="./assets/img/check.svg" alt="" />
+                  <img src="./assets/img/check.svg" alt="check" />
                 </OverlayCol>
                 <OverlayCol>
-                  <img src="./assets/img/check.svg" alt="" />
+                  <img src="./assets/img/check.svg" alt="check" />
                 </OverlayCol>
                 <OverlayCol>
-                  <img src="./assets/img/check.svg" alt="" />
+                  <img src="./assets/img/check.svg" alt="check" />
                 </OverlayCol>
                 <OverlayCol>
-                  <img src="./assets/img/check.svg" alt="" />
+                  <img src="./assets/img/check.svg" alt="check" />
                 </OverlayCol>
               </OverlayRow>
-              {/* OverlayRow end  2 */}
               <OverlayRow>
                 <OverlayCol1>
                   <p>
@@ -550,16 +532,15 @@ export const Home = () => {
                 </OverlayCol1>
                 <OverlayCol></OverlayCol>
                 <OverlayCol>
-                  <img src="./assets/img/check.svg" alt="" />
+                  <img src="./assets/img/check.svg" alt="check" />
                 </OverlayCol>
                 <OverlayCol>
-                  <img src="./assets/img/check.svg" alt="" />
+                  <img src="./assets/img/check.svg" alt="check" />
                 </OverlayCol>
                 <OverlayCol>
-                  <img src="./assets/img/check.svg" alt="" />
+                  <img src="./assets/img/check.svg" alt="check" />
                 </OverlayCol>
               </OverlayRow>
-              {/* OverlayRow end  3 */}
               <OverlayRow>
                 <OverlayCol1>
                   <p>Free 15 minute Consultation Per Case</p>
@@ -567,13 +548,12 @@ export const Home = () => {
                 <OverlayCol></OverlayCol>
                 <OverlayCol></OverlayCol>
                 <OverlayCol>
-                  <img src="./assets/img/check.svg" alt="" />
+                  <img src="./assets/img/check.svg" alt="check" />
                 </OverlayCol>
                 <OverlayCol>
-                  <img src="./assets/img/check.svg" alt="" />
+                  <img src="./assets/img/check.svg" alt="check" />
                 </OverlayCol>
               </OverlayRow>
-              {/* OverlayRow end  4 */}
               <OverlayRow>
                 <OverlayCol1>
                   <p>15% off Additional Hours</p>
@@ -581,13 +561,12 @@ export const Home = () => {
                 <OverlayCol></OverlayCol>
                 <OverlayCol></OverlayCol>
                 <OverlayCol>
-                  <img src="./assets/img/check.svg" alt="" />
+                  <img src="./assets/img/check.svg" alt="check" />
                 </OverlayCol>
                 <OverlayCol>
-                  <img src="./assets/img/check.svg" alt="" />
+                  <img src="./assets/img/check.svg" alt="check" />
                 </OverlayCol>
               </OverlayRow>
-              {/* OverlayRow end  5 */}
               <OverlayRow>
                 <OverlayCol1>
                   <p>Hours of legal support annually</p>
@@ -605,13 +584,10 @@ export const Home = () => {
                   <p className="text-input">50</p>
                 </OverlayCol>
               </OverlayRow>
-              {/* OverlayRow end  5 */}
             </SubscriptionOverLay>
-            {/* SubscriptionOverLay end */}
           </SubscriptionRow>
         </SubscriptionContainer>
       </SubscriptionSection>
-      {/*SubscriptionSection end*/}
 
       <AdvisorSection>
         <SliderHeader className="container">
@@ -634,49 +610,36 @@ export const Home = () => {
         <Slider ref={adviceSliderRef} {...settings}>
           <AdvisorCard>
             <AdvisorImage>
-              <img src="./assets/img/image1.jpg" alt="" />
+              <img src="./assets/img/image1.jpg" alt="image1" />
             </AdvisorImage>
             <AdvisorTitle>Employment Law</AdvisorTitle>
           </AdvisorCard>
-          {/* advisor 1 end */}
           <AdvisorCard>
             <AdvisorImage>
-              <img src="./assets/img/image2.jpg" alt="" />
+              <img src="./assets/img/image2.jpg" alt="image2" />
             </AdvisorImage>
             <AdvisorTitle>Employment Law</AdvisorTitle>
           </AdvisorCard>
-          {/* advisor 2 end */}
           <AdvisorCard>
             <AdvisorImage>
-              <img src="./assets/img/image3.jpg" alt="" />
+              <img src="./assets/img/image3.jpg" alt="image3" />
             </AdvisorImage>
             <AdvisorTitle>Employment Law</AdvisorTitle>
           </AdvisorCard>
-          {/* advisor 2 end */}
           <AdvisorCard>
             <AdvisorImage>
-              <img src="./assets/img/image4.jpg" alt="" />
+              <img src="./assets/img/image4.jpg" alt="image4" />
             </AdvisorImage>
             <AdvisorTitle>Employment Law</AdvisorTitle>
           </AdvisorCard>
-          {/* advisor 2 end */}
           <AdvisorCard>
             <AdvisorImage>
-              <img src="./assets/img/image5.jpg" alt="" />
+              <img src="./assets/img/image5.jpg" alt="image5" />
             </AdvisorImage>
             <AdvisorTitle>Employment Law</AdvisorTitle>
           </AdvisorCard>
-          {/* advisor 2 end */}
-          {/* <AdvisorCard>
-            <AdvisorImage>
-              <img src="./assets/img/advisor6.jpg" alt="" />
-            </AdvisorImage>
-            <AdvisorTitle>Employment Law</AdvisorTitle>
-          </AdvisorCard> */}
-          {/* advisor 2 end */}
         </Slider>
       </AdvisorSection>
-      {/* AdvisorSection ed */}
 
       <LawyerSection>
         <LawyerContainer className="container">
@@ -692,7 +655,6 @@ export const Home = () => {
               <NormalButton>View All</NormalButton>
             </LawyerHeaderRight>
           </LawyerHeader>
-          {/* LawyerHeader end */}
           <LawyerRow>
             <LawyerCol>
               <LawyerCard>
@@ -713,7 +675,6 @@ export const Home = () => {
                 </LawyerCardText>
               </LawyerCard>
             </LawyerCol>
-            {/* col 1 end */}
             <LawyerCol>
               <LawyerCard>
                 <LawyerCardImage>
@@ -735,7 +696,6 @@ export const Home = () => {
                 </LawyerCardText>
               </LawyerCard>
             </LawyerCol>
-            {/* col 2 end */}
             <LawyerCol>
               <LawyerCard>
                 <LawyerCardImage>
@@ -758,7 +718,6 @@ export const Home = () => {
                 </LawyerCardText>
               </LawyerCard>
             </LawyerCol>
-            {/* col 3 end */}
             <LawyerCol>
               <LawyerCard>
                 <LawyerCardImage>
@@ -778,12 +737,9 @@ export const Home = () => {
                 </LawyerCardText>
               </LawyerCard>
             </LawyerCol>
-            {/* col 4 end */}
           </LawyerRow>
-          {/* LawyerRow end */}
         </LawyerContainer>
       </LawyerSection>
-      {/* LawyerSection end */}
 
       <HowToGuidSection>
         <HowToGuidConatiner className="container">
@@ -803,7 +759,6 @@ export const Home = () => {
               </SectionSubtitle>
               <NormalButton>How to Guides</NormalButton>
             </HowToGuidCol>
-            {/* HowToGuidCol end */}
             <HowToGuidCol className="right">
               <SectionTitie>Some Information About Law For Me</SectionTitie>
               <SectionSubtitle>
@@ -826,12 +781,9 @@ export const Home = () => {
                 </p>
               </InfoCard>
             </HowToGuidCol>
-            {/* HowToGuidCol end */}
           </HowToGuidRow>
-          {/* HowToGuidRow end */}
         </HowToGuidConatiner>
       </HowToGuidSection>
-      {/* how to guid  section*/}
 
       <OurTeamSection>
         <OurTeamConatiner className="container">
@@ -878,19 +830,18 @@ export const Home = () => {
               </p>
               <footer>
                 <div>
-                    <p>Ut facilisis rutrum.</p>
-                    <StarContainer>
-                          <img src="./assets/img/star.svg" alt="*"/>
-                          <img src="./assets/img/star.svg" alt="*"/>
-                          <img src="./assets/img/star.svg" alt="*"/>
-                          <img src="./assets/img/star.svg" alt="*"/>
-                          <img src="./assets/img/star.svg" alt="*"/>
-                    </StarContainer>
+                  <p>Ut facilisis rutrum.</p>
+                  <StarContainer>
+                    <img src="./assets/img/star.svg" alt="*" />
+                    <img src="./assets/img/star.svg" alt="*" />
+                    <img src="./assets/img/star.svg" alt="*" />
+                    <img src="./assets/img/star.svg" alt="*" />
+                    <img src="./assets/img/star.svg" alt="*" />
+                  </StarContainer>
                 </div>
-                <img src="./assets/img/dummy-logo.png" alt="logo"/>
+                <img src="./assets/img/dummy-logo.png" alt="logo" />
               </footer>
             </CustomerSaysCard>
-            {/* card 1 */}
             <CustomerSaysCard>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi,
@@ -901,19 +852,18 @@ export const Home = () => {
               </p>
               <footer>
                 <div>
-                    <p>Ut facilisis rutrum.</p>
-                    <StarContainer>
-                          <img src="./assets/img/star.svg" alt="*"/>
-                          <img src="./assets/img/star.svg" alt="*"/>
-                          <img src="./assets/img/star.svg" alt="*"/>
-                          <img src="./assets/img/star.svg" alt="*"/>
-                          <img src="./assets/img/star.svg" alt="*"/>
-                    </StarContainer>
+                  <p>Ut facilisis rutrum.</p>
+                  <StarContainer>
+                    <img src="./assets/img/star.svg" alt="*" />
+                    <img src="./assets/img/star.svg" alt="*" />
+                    <img src="./assets/img/star.svg" alt="*" />
+                    <img src="./assets/img/star.svg" alt="*" />
+                    <img src="./assets/img/star.svg" alt="*" />
+                  </StarContainer>
                 </div>
-                <img src="./assets/img/dummy-logo.png" alt="logo"/>
+                <img src="./assets/img/dummy-logo.png" alt="logo" />
               </footer>
             </CustomerSaysCard>
-            {/* card 2 */}
             <CustomerSaysCard>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi,
@@ -924,24 +874,22 @@ export const Home = () => {
               </p>
               <footer>
                 <div>
-                    <p>Ut facilisis rutrum.</p>
-                    <StarContainer>
-                          <img src="./assets/img/star.svg" alt="*"/>
-                          <img src="./assets/img/star.svg" alt="*"/>
-                          <img src="./assets/img/star.svg" alt="*"/>
-                          <img src="./assets/img/star.svg" alt="*"/>
-                          <img src="./assets/img/star.svg" alt="*"/>
-                    </StarContainer>
+                  <p>Ut facilisis rutrum.</p>
+                  <StarContainer>
+                    <img src="./assets/img/star.svg" alt="*" />
+                    <img src="./assets/img/star.svg" alt="*" />
+                    <img src="./assets/img/star.svg" alt="*" />
+                    <img src="./assets/img/star.svg" alt="*" />
+                    <img src="./assets/img/star.svg" alt="*" />
+                  </StarContainer>
                 </div>
-                <img src="./assets/img/dummy-logo.png" alt="logo"/>
+                <img src="./assets/img/dummy-logo.png" alt="logo" />
               </footer>
             </CustomerSaysCard>
-            {/* card 3 */}
           </Slider>
         </CustomerSaySlider>
       </OurTeamSection>
-      {/* OurTeam Section  end*/}
-      <FooterComponent/>
+      <FooterComponent />
     </main>
   );
 };

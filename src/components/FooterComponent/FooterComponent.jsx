@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import {
   FooterContainer,
   Container,
@@ -11,14 +12,14 @@ import {
   MidCol1,
   MidCol,
   SocialLinkwrapper,
-  FooterBottom
+  FooterBottom,
 } from "./styles";
 
 export const FooterComponent = () => {
-  const moveTop =()=>{
-    let htmlTag=document.querySelector('html');
-    htmlTag.scrollTop=0;
-  } 
+  const moveTop = () => {
+    let htmlTag = document.querySelector("html");
+    htmlTag.scrollTop = 0;
+  };
   return (
     <FooterContainer>
       <Container className="container">
@@ -50,28 +51,27 @@ export const FooterComponent = () => {
             </InputGroup>
           </SubmitSection>
         </FooterTop>
-        {/* FooterTop End */}
         <FooterMid>
           <MidCol1>
-            <a className="link logo" style={{display:"flex"}}>
-              <img src="./assets/img/footer-logo.svg" alt="" />
+            <a className="link logo" style={{ display: "flex" }}>
+              <img src="./assets/img/footer-logo.svg" alt="logo" />
             </a>
             <p className="provided-text">
               Provide you with legal and HR documents, how to guides, and legal
               advice from qualified Solicitors and Barristers
             </p>
             <SocialLinkwrapper>
-              <a className="link">
-                <img src="./assets/img/footer-twitter.svg" />
+              <a className="link" href="https://www.twitter.com">
+                <img src="./assets/img/footer-twitter.svg" alt="twitter" />
               </a>
-              <a className="link">
-                <img src="./assets/img/footer-instagram.svg" />
+              <a className="link" href="https://www.instagram.com">
+                <img src="./assets/img/footer-instagram.svg" alt="insta" />
               </a>
-              <a className="link">
-                <img src="./assets/img/footer-facebook.svg" />
+              <a className="link" href="https://www.facebook.com">
+                <img src="./assets/img/footer-facebook.svg" alt="fb" />
               </a>
-              <a className="link">
-                <img src="./assets/img/footer-linkedin.svg" />
+              <a className="link" href="https://www.linkedin.com">
+                <img src="./assets/img/footer-linkedin.svg" alt="linkedin" />
               </a>
             </SocialLinkwrapper>
           </MidCol1>
@@ -95,16 +95,15 @@ export const FooterComponent = () => {
           </button>
         </FooterMid>
         <FooterBottom>
-              <a className="link">Terms And Conditions</a>
-              <span>|</span>
-              <a className="link">Terms Of Use</a>
-              <span>|</span>
-              <a className="link">Privacy Policy</a>
-              <span>|</span>
-              <a className="link">Cookie Policy</a>
+          <a className="link">Terms And Conditions</a>
+          <span>|</span>
+          <a className="link">Terms Of Use</a>
+          <span>|</span>
+          <a className="link">Privacy Policy</a>
+          <span>|</span>
+          <a className="link">Cookie Policy</a>
         </FooterBottom>
       </Container>
-      {/* Container end */}
       <CopyRightSection>
         <Container>
           <p>Copyright 2022 KB and Co Ltd t/a Law For Me</p>

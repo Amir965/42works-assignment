@@ -5,7 +5,7 @@ export const SearchBox = (props) => {
     <Box className={props.className}>
       <input placeholder="Search documents and topics..." />
       <SearchBtn>
-        <img src="./assets/img/search-box-icon.svg" />
+        <img src="./assets/img/search-box-icon.svg" alt="search" />
       </SearchBtn>
     </Box>
   );
